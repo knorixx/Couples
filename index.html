@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="content">
         <main class="main">
@@ -18,23 +20,27 @@
             <div class="game" id="gameBoard">
                 <h2 class="board_title">Настроить количество карточек (от 2 до 6)</h2>
                 <form class="form_board">
-                    <input type="number" min="2" max="6" placeholder="По гозиронтали/вертикали" class="input_board" id="input__board">
-                    <button type="button" class="btnBoard button" >НАЧАТЬ</button>
+                    <input type="number" min="2" max="6" placeholder="По гозиронтали/вертикали" class="input_board"
+                        id="input__board">
+                    <button type="button" class="btnBoard button">НАЧАТЬ</button>
                 </form>
             </div>
-            <template id="gameTableTemplate">
-                <div class="table">
-                    <button class="table_button">Рестарт</button>
-                </div>
-            </template>
-            <template id="cardTemplate">
-                <div class="card">
-                    <i class="flipped-icon fa" id="flippedIcon"></i>
-                    <i class="default-icon fa fa-question-circle"></i>         
-                </div>
-            </template>
         </main>
+        <div class="confetti">
         </div>
-    <script src="main.js"></script>
-</body> 
+    </div> 
+        <template id="gameTableTemplate">
+            <div class="table">
+                <button class="table_button">Рестарт</button>
+            </div>
+        </template>
+        <template id="cardTemplate">
+            <div class="card">
+                <i class="flipped-icon fa" id="flippedIcon"></i>
+                <i class="default-icon fa fa-question-circle"></i>
+            </div>
+        </template>
+        <script src="main.js" type="module"></script>
+</body>
+
 </html>

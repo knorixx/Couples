@@ -3,8 +3,13 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
     font-family: "Advent Pro", sans-serif;
-   
+}
+body{
+    background-image: url(img/fon.png); 
+    background-position: center;
+    background-size: cover;
 }
 .content{
     display: flex;
@@ -76,12 +81,12 @@
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: #fff;
+    background: transparent;
     color: #000;
     border-radius: 40px;
     padding: 20px;
     cursor: pointer;
-  }
+}
   
 .button:hover {
     color: rgba(181, 13, 181, 0.7);
@@ -103,29 +108,50 @@
     transition: .3s;
     font-size: 30px;
     cursor: pointer;
-  }
+    
+}
 .card:hover {
     background-color: rgba(218, 69, 218, 1);
   }
+
+.card.flip {
+    background: #e11284;
+    transform: perspective(100px) rotateY(180deg);
+    user-select: none;
+};
+
+.default-icon {
+    display: block;
+    pointer-events: none;
+    /* display: none; */
+}
+  
+.flipped-icon {
+    display: none;
+    pointer-events: none;
+    /* display: block; */
+}
 .card.flip .default-icon{
     display: none;
 }
 .card.flip .flipped-icon{
     display: block;
 }
-.card.flip {
-    background: #e11284;
-    transform: perspective(100px) rotateY(180deg);
-    user-select: none;
-};
-.default-icon {
-    display: block;
-    pointer-events: none;
-    /* display: none; */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 100vh;
+    z-index: -1;
+}
+.card.successfully {
+    background: #1dd032;
+    transform: scale(0.95);
+  } 
+@keyframes moveDown {
+  100% {
+    top: 110%;
+    transform: rotate(360deg);
   }
-  
-.flipped-icon {
-    display: none;
-    pointer-events: none;
-    /* display: block; */
-  }
+}
